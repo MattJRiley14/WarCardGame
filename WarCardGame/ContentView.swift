@@ -13,12 +13,21 @@ struct ContentView: View {
             Image("background")
             
             VStack {
+                Spacer()
+                
                 Image("logo")
                 
+                Spacer()
+                
                 HStack {
+                    Spacer()
                     Image("card5")
+                    Spacer()
                     Image("card5")
+                    Spacer()
                 }
+                
+                Spacer()
                 
                 Button {
                     print("Button clicked!")
@@ -26,16 +35,22 @@ struct ContentView: View {
                     Image("dealbutton")
                 }
                 
+                Spacer()
+                
                 HStack {
+                    Spacer()
                     VStack {
                         Text("Player")
                         Text("0")
                     }
+                    Spacer()
                     VStack {
                         Text("CPU")
                         Text("0")
                     }
+                    Spacer()
                 }
+                Spacer()
             }
         }
     }
