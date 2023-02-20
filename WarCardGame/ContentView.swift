@@ -39,7 +39,23 @@ struct ContentView: View {
                 Spacer()
                 
                 Button {
-                    print("Button clicked!")
+                    // The following code will run each time the button is clicked
+                    
+                    // The random method generates a random Int from one specified Int to a second specified Int (Ex: Int.random(in: Int...14)
+                    let playerRandom = Int.random(in: 2...14)
+                    let cpuRandom = Int.random(in: 2...14)
+                    
+                    // Updates the cards displayed on the app
+                    playerCard = "card" + String(playerRandom)
+                    cpuCard = "card" + String(cpuRandom)
+
+                    // Update the score
+                    if (playerRandom > cpuRandom){
+                        playerScore = playerScore + 1
+                    } else if (playerRandom < cpuRandom) {
+                        cpuScore = cpuScore + 1
+                    }
+
                 } label: {
                     Image("dealbutton")
                 }
